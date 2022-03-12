@@ -90,7 +90,7 @@ header nav ul li a{
 .bottom-section {
 	width: 100%;	
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	flex-flow: row wrap;
 }
@@ -114,28 +114,6 @@ header nav ul li a{
 	padding: 0;
 	font-size: 1em;
 	line-height: 25px;
-}
-
-.section-one,
-.section-two,
-.section-three {
-	width: 100%;
-	border-top: 1px solid #eee;
-
-}
-
-.section-one h3 {
-	/* padding: 10px 0; */
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h3,
-.section-three h3 {
-	/* padding: 10px 30px; */
 }
 
 .menu {
@@ -174,3 +152,79 @@ footer span {
 	font-size: 0.875em;
 }
 
+/* Media queries for responsive site */
+
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+
+	.bottom-section {
+		align-items: flex-start;
+
+
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33%;
+		border-top: 1px solid #eee;
+
+	}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+
+	.section-one h3 {
+		padding: 10px 0;
+
+	} 
+	
+	.section-two h3,
+	.section-three h3 {
+	padding: 10px 30px;
+}
+
+	.section-two p,
+	.section-three p {
+	padding: 0 30px;
+	}
+
+
+ 
+}
+ 
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+
+	header {
+		width: 100%;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-flow: row wrap;
+		border-bottom: 3px solid #77a466;
+
+	}
+	
+	header h1 {
+		border-bottom: none;
+		margin: 0;
+		padding: 38px 0;
+		width: 60%;
+		text-align: initial;
+		
+	}
+
+	header nav {
+		width: 40%;
+	}
+	header nav ul {
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row nowrap;
+	}
+}
